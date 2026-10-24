@@ -1,0 +1,2724 @@
+== http://127.0.0.1:19350/api/v1/items/1 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:29 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/1 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:29 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/1 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:29 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/1 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:29 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/1 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:30 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/1 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:30 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/1 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:31 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/1 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:31 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/2 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:31 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/2 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:32 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/2 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:32 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/2 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:33 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/2 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:33 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/2 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:34 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/2 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:34 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/2 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:34 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/3 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:35 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/3 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:35 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/3 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:36 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/3 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:36 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/3 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:36 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/3 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:37 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/3 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:37 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/3 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:37 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/4 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:38 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/4 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:38 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/4 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:39 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/4 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:39 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/4 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:39 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/4 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:40 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/4 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:40 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/4 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:40 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/5 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:41 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/5 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:41 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/5 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:42 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/5 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:42 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/5 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:42 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/5 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:42 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/5 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:43 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/5 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:43 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/6 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:43 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/6 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:44 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/6 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:44 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/6 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:45 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/6 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:45 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/6 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:45 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/6 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:46 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/6 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:46 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/7 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:46 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/7 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:47 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/7 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:47 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/7 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:47 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/7 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:48 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/7 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:48 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/7 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:48 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/7 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:49 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/8 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:49 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/8 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:49 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/8 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:50 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/8 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:50 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/8 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:50 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/8 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:51 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/8 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:51 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/8 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:51 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/9 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:52 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/9 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:52 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/9 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:52 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/9 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:53 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/9 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:53 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/9 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:53 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/9 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:54 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/9 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:54 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/10 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:54 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/10 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:55 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/10 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:55 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/10 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:55 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/10 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:56 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/10 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:56 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/10 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:56 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/10 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:57 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/11 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:57 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/11 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:57 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/11 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:58 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/11 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:58 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/11 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:58 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/11 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:58 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/11 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:59 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/11 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:59 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/12 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:59 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/12 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:59 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/12 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:59 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/12 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:59 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/12 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:40:59 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/12 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:00 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/12 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:00 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/12 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:01 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/13 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:01 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/13 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:01 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/13 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:02 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/13 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:02 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/13 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:02 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/13 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:02 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/13 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:02 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/13 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:03 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/14 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:03 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/14 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:03 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/14 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:04 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/14 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:04 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/14 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:04 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/14 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:05 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/14 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:05 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/14 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:05 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/15 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:06 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/15 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:07 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/15 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:07 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/15 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:08 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/15 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:08 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/15 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:08 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/15 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:08 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/15 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:08 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/16 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:09 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/16 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:09 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/16 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:09 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/16 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:09 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/16 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:09 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/16 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:10 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/16 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:10 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/16 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:10 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/17 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:11 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/17 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:11 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/17 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:11 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/17 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:12 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/17 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:12 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/17 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:12 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/17 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:13 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/17 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:13 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/18 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:13 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/18 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:13 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/18 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:14 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/18 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:14 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/18 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:14 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/18 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:14 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/18 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:14 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/18 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:15 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/19 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:15 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/19 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:15 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/19 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:16 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/19 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:16 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/19 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:16 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/19 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:16 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/19 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:16 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/19 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:16 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/20 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:16 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/20 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:17 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/20 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:17 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/20 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:17 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/20 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:17 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/20 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:17 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/20 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:17 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/20 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:18 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/21 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:18 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/21 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:18 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/21 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:18 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/21 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:18 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/21 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:18 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/21 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:19 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/21 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:19 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/21 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:19 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/22 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:19 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/22 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:19 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/22 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:20 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/22 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:20 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/22 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:20 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/22 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:20 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/22 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:20 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/22 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:20 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/23 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:21 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/23 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:21 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/23 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:21 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/23 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:21 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/23 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:21 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/23 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:22 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/23 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:22 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/23 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:22 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/24 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:22 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/24 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:22 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/24 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:23 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/24 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:23 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/24 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:23 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/24 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:23 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/24 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:24 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/24 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:24 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/25 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:24 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/25 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:25 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/25 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:25 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/25 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:25 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/25 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:25 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/25 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:26 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/25 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:26 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/25 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:26 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/26 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:27 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/26 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:27 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/26 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:27 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/26 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:28 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/26 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:28 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/26 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:29 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/26 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:29 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/26 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:30 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/27 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:30 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/27 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:30 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/27 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:31 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/27 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:31 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/27 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:31 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/27 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:32 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/27 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:32 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/27 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:32 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/28 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:32 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/28 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:33 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/28 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:33 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/28 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:34 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/28 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:34 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/28 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:34 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/28 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:34 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/28 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:35 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/29 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:35 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/29 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:35 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/29 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:36 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/29 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:36 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/29 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:37 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/29 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:37 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/29 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:37 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/29 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:38 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/30 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:38 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/30 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:38 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/30 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:39 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/30 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:39 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/30 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:39 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/30 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:40 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/30 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:40 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19350/api/v1/items/30 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:40 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19351/api/v1/orders/1 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:41 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/1 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:41 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/1 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:41 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/1 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:42 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/1 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:42 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/1 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:42 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/1 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:43 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/1 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:43 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/2 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:44 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/2 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:44 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/2 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:44 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/2 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:45 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/2 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:46 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/2 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:46 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/2 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:46 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/2 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:47 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/3 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:47 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/3 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:47 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/3 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:48 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/3 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:48 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/3 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:49 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/3 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:49 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/3 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:49 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/3 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:50 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/4 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:50 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/4 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:50 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/4 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:50 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/4 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:51 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/4 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:51 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/4 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:52 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/4 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:52 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/4 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:52 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/5 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:52 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/5 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:53 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/5 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:53 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/5 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:53 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/5 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:53 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/5 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:53 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/5 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:53 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/5 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:53 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/6 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:54 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/6 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:54 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/6 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:54 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/6 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:54 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/6 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:54 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/6 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:54 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/6 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:54 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/6 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:54 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/7 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:54 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/7 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/7 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/7 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/7 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/7 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/7 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/7 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/8 Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/8 Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/8 Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:55 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/8 Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/8 Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/8 Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/8 Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19351/api/v1/orders/8 Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+
+== http://127.0.0.1:19352/static/app.js Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.js Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.js Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.js Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.js Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.js Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.js Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:56 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.js Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:57 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.css Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:57 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.css Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:57 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.css Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:57 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.css Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:57 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.css Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:57 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.css Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:57 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.css Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:57 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/app.css Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:58 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/logo.svg Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:58 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/logo.svg Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:58 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/logo.svg Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:58 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/logo.svg Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:58 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/logo.svg Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:59 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/logo.svg Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:59 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/logo.svg Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:59 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/logo.svg Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:59 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/fonts.css Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:59 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/fonts.css Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:41:59 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/fonts.css Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:00 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/fonts.css Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:00 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/fonts.css Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:00 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/fonts.css Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:00 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/fonts.css Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:00 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19352/static/fonts.css Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:01 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: *
+
+== http://127.0.0.1:19354/api/v1/profile Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:01 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/profile Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:01 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/profile Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:01 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/profile Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:02 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/profile Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:02 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/profile Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:02 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://raijin.127.0.0.1
+Vary: Origin
+
+== http://127.0.0.1:19354/api/v1/profile Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:03 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/profile Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:03 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/settings Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:03 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/settings Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:03 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/settings Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:04 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/settings Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:04 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/settings Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:04 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/settings Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:04 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://raijin.127.0.0.1
+Vary: Origin
+
+== http://127.0.0.1:19354/api/v1/settings Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:04 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19354/api/v1/settings Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:05 GMT
+Content-Type: application/json
+Content-Length: 45
+
+== http://127.0.0.1:19353/api/v1/me Origin: https://attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:05 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://attacker.example
+Access-Control-Allow-Credentials: true
+Vary: Origin
+
+== http://127.0.0.1:19353/api/v1/me Origin: null
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:05 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: null
+Access-Control-Allow-Credentials: true
+Vary: Origin
+
+== http://127.0.0.1:19353/api/v1/me Origin: https://127.0.0.1.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:05 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://127.0.0.1.attacker.example
+Access-Control-Allow-Credentials: true
+Vary: Origin
+
+== http://127.0.0.1:19353/api/v1/me Origin: https://attacker127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:06 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://attacker127.0.0.1
+Access-Control-Allow-Credentials: true
+Vary: Origin
+
+== http://127.0.0.1:19353/api/v1/me Origin: https://127x0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:06 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://127x0.0.1
+Access-Control-Allow-Credentials: true
+Vary: Origin
+
+== http://127.0.0.1:19353/api/v1/me Origin: https://raijin.127.0.0.1
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:06 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://raijin.127.0.0.1
+Access-Control-Allow-Credentials: true
+Vary: Origin
+
+== http://127.0.0.1:19353/api/v1/me Origin: https://127.0.0.1`.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:06 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://127.0.0.1`.attacker.example
+Access-Control-Allow-Credentials: true
+Vary: Origin
+
+== http://127.0.0.1:19353/api/v1/me Origin: https://127.0.0.1_.attacker.example
+HTTP/1.0 200 OK
+Server: nginx 
+Date: Sat, 24 Oct 2026 23:42:06 GMT
+Content-Type: application/json
+Content-Length: 45
+Access-Control-Allow-Origin: https://127.0.0.1_.attacker.example
+Access-Control-Allow-Credentials: true
+Vary: Origin
+
+== http://127.0.0.1:19355/api/v1/health Origin: https://attacker.example
+curl: (7) Failed to connect to 127.0.0.1 port 19355 after 0 ms: Couldn't connect to server
+== http://127.0.0.1:19355/api/v1/health Origin: null
+curl: (7) Failed to connect to 127.0.0.1 port 19355 after 0 ms: Couldn't connect to server
+== http://127.0.0.1:19355/api/v1/health Origin: https://127.0.0.1.attacker.example
+curl: (7) Failed to connect to 127.0.0.1 port 19355 after 0 ms: Couldn't connect to server
+== http://127.0.0.1:19355/api/v1/health Origin: https://attacker127.0.0.1
+curl: (7) Failed to connect to 127.0.0.1 port 19355 after 0 ms: Couldn't connect to server
+== http://127.0.0.1:19355/api/v1/health Origin: https://127x0.0.1
+curl: (7) Failed to connect to 127.0.0.1 port 19355 after 0 ms: Couldn't connect to server
+== http://127.0.0.1:19355/api/v1/health Origin: https://raijin.127.0.0.1
+curl: (7) Failed to connect to 127.0.0.1 port 19355 after 0 ms: Couldn't connect to server
+== http://127.0.0.1:19355/api/v1/health Origin: https://127.0.0.1`.attacker.example
+curl: (7) Failed to connect to 127.0.0.1 port 19355 after 0 ms: Couldn't connect to server
+== http://127.0.0.1:19355/api/v1/health Origin: https://127.0.0.1_.attacker.example
+curl: (7) Failed to connect to 127.0.0.1 port 19355 after 0 ms: Couldn't connect to server

@@ -1,0 +1,65 @@
+raijin-cors log line that is not JSON
+{"url":"https://api.example.com/me","test":"reflect","origin":"https://attacker.example","method":"GET","status":200,"acao":"https://attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/me","test":"null","origin":"null","method":"GET","status":200,"acao":"null","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/me","test":"prefix","origin":"https://api.example.com.attacker.example","method":"GET","status":200,"acao":"https://api.example.com.attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/me","test":"suffix","origin":"https://attackerapi.example.com","method":"GET","status":200,"acao":"https://attackerapi.example.com","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/me","test":"dot","origin":"https://apixexample.com","method":"GET","status":200,"acao":"https://apixexample.com","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/me","test":"subdomain","origin":"https://raijin.api.example.com","method":"GET","status":200,"acao":"https://raijin.api.example.com","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/me","test":"http","origin":"http://api.example.com","method":"GET","status":200,"acao":"http://api.example.com","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/me","test":"backtick","origin":"https://api.example.com`.attacker.example","method":"GET","status":200,"acao":"https://api.example.com`.attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/me","test":"underscore","origin":"https://api.example.com_.attacker.example","method":"GET","status":200,"acao":"https://api.example.com_.attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/orders","test":"reflect","origin":"https://attacker.example","method":"GET","status":200,"acao":"https://attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/orders","test":"null","origin":"null","method":"GET","status":200,"acao":"null","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/orders","test":"prefix","origin":"https://api.example.com.attacker.example","method":"GET","status":200,"acao":"https://api.example.com.attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/orders","test":"suffix","origin":"https://attackerapi.example.com","method":"GET","status":200,"acao":"https://attackerapi.example.com","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/orders","test":"dot","origin":"https://apixexample.com","method":"GET","status":200,"acao":"https://apixexample.com","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/orders","test":"subdomain","origin":"https://raijin.api.example.com","method":"GET","status":200,"acao":"https://raijin.api.example.com","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/orders","test":"http","origin":"http://api.example.com","method":"GET","status":200,"acao":"http://api.example.com","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/orders","test":"backtick","origin":"https://api.example.com`.attacker.example","method":"GET","status":200,"acao":"https://api.example.com`.attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/orders","test":"underscore","origin":"https://api.example.com_.attacker.example","method":"GET","status":200,"acao":"https://api.example.com_.attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://www.example.com/","test":"reflect","origin":"https://attacker.example","method":"GET","status":200,"acao":"","acac":"","vary":""}
+{"url":"https://www.example.com/","test":"null","origin":"null","method":"GET","status":200,"acao":"","acac":"","vary":""}
+{"url":"https://www.example.com/","test":"prefix","origin":"https://www.example.com.attacker.example","method":"GET","status":200,"acao":"","acac":"","vary":""}
+{"url":"https://www.example.com/","test":"suffix","origin":"https://attackerwww.example.com","method":"GET","status":200,"acao":"","acac":"","vary":""}
+{"url":"https://www.example.com/","test":"dot","origin":"https://wwwxexample.com","method":"GET","status":200,"acao":"","acac":"","vary":""}
+{"url":"https://www.example.com/","test":"subdomain","origin":"https://raijin.www.example.com","method":"GET","status":200,"acao":"","acac":"","vary":""}
+{"url":"https://www.example.com/","test":"http","origin":"http://www.example.com","method":"GET","status":200,"acao":"","acac":"","vary":""}
+{"url":"https://www.example.com/","test":"backtick","origin":"https://www.example.com`.attacker.example","method":"GET","status":200,"acao":"","acac":"","vary":""}
+{"url":"https://www.example.com/","test":"underscore","origin":"https://www.example.com_.attacker.example","method":"GET","status":200,"acao":"","acac":"","vary":""}
+{"url":"https://shop.example.com/cart","test":"reflect","origin":"https://attacker.example","method":"GET","status":200,"acao":"https://shop.example.com","acac":"true","vary":"Origin"}
+{"url":"https://shop.example.com/cart","test":"null","origin":"null","method":"GET","status":200,"acao":"https://shop.example.com","acac":"true","vary":"Origin"}
+{"url":"https://shop.example.com/cart","test":"prefix","origin":"https://shop.example.com.attacker.example","method":"GET","status":200,"acao":"https://shop.example.com","acac":"true","vary":"Origin"}
+{"url":"https://shop.example.com/cart","test":"suffix","origin":"https://attackershop.example.com","method":"GET","status":200,"acao":"https://shop.example.com","acac":"true","vary":"Origin"}
+{"url":"https://shop.example.com/cart","test":"dot","origin":"https://shopxexample.com","method":"GET","status":200,"acao":"https://shop.example.com","acac":"true","vary":"Origin"}
+{"url":"https://shop.example.com/cart","test":"subdomain","origin":"https://raijin.shop.example.com","method":"GET","status":200,"acao":"https://shop.example.com","acac":"true","vary":"Origin"}
+{"url":"https://shop.example.com/cart","test":"http","origin":"http://shop.example.com","method":"GET","status":200,"acao":"https://shop.example.com","acac":"true","vary":"Origin"}
+{"url":"https://shop.example.com/cart","test":"backtick","origin":"https://shop.example.com`.attacker.example","method":"GET","status":200,"acao":"https://shop.example.com","acac":"true","vary":"Origin"}
+{"url":"https://shop.example.com/cart","test":"underscore","origin":"https://shop.example.com_.attacker.example","method":"GET","status":200,"acao":"https://shop.example.com","acac":"true","vary":"Origin"}
+{"url":"https://cdn.example.com/app.js","test":"reflect","origin":"https://attacker.example","method":"GET","status":200,"acao":"*","acac":"","vary":""}
+{"url":"https://cdn.example.com/app.js","test":"null","origin":"null","method":"GET","status":200,"acao":"*","acac":"","vary":""}
+{"url":"https://cdn.example.com/app.js","test":"prefix","origin":"https://cdn.example.com.attacker.example","method":"GET","status":200,"acao":"*","acac":"","vary":""}
+{"url":"https://cdn.example.com/app.js","test":"suffix","origin":"https://attackercdn.example.com","method":"GET","status":200,"acao":"*","acac":"","vary":""}
+{"url":"https://cdn.example.com/app.js","test":"dot","origin":"https://cdnxexample.com","method":"GET","status":200,"acao":"*","acac":"","vary":""}
+{"url":"https://cdn.example.com/app.js","test":"subdomain","origin":"https://raijin.cdn.example.com","method":"GET","status":200,"acao":"*","acac":"","vary":""}
+{"url":"https://cdn.example.com/app.js","test":"http","origin":"http://cdn.example.com","method":"GET","status":200,"acao":"*","acac":"","vary":""}
+{"url":"https://cdn.example.com/app.js","test":"backtick","origin":"https://cdn.example.com`.attacker.example","method":"GET","status":200,"acao":"*","acac":"","vary":""}
+{"url":"https://cdn.example.com/app.js","test":"underscore","origin":"https://cdn.example.com_.attacker.example","method":"GET","status":200,"acao":"*","acac":"","vary":""}
+{"url":"https://down.example.com/","test":"reflect","origin":"https://attacker.example","method":"GET","status":0,"acao":"","acac":"","vary":"","error":"connection refused"}
+{"url":"https://down.example.com/","test":"null","origin":"null","method":"GET","status":0,"acao":"","acac":"","vary":"","error":"connection refused"}
+{"url":"https://down.example.com/","test":"prefix","origin":"https://down.example.com.attacker.example","method":"GET","status":0,"acao":"","acac":"","vary":"","error":"connection refused"}
+{"url":"https://down.example.com/","test":"suffix","origin":"https://attackerdown.example.com","method":"GET","status":0,"acao":"","acac":"","vary":"","error":"connection refused"}
+{"url":"https://down.example.com/","test":"dot","origin":"https://downxexample.com","method":"GET","status":0,"acao":"","acac":"","vary":"","error":"connection refused"}
+{"url":"https://down.example.com/","test":"subdomain","origin":"https://raijin.down.example.com","method":"GET","status":0,"acao":"","acac":"","vary":"","error":"connection refused"}
+{"url":"https://down.example.com/","test":"http","origin":"http://down.example.com","method":"GET","status":0,"acao":"","acac":"","vary":"","error":"connection refused"}
+{"url":"https://down.example.com/","test":"backtick","origin":"https://down.example.com`.attacker.example","method":"GET","status":0,"acao":"","acac":"","vary":"","error":"connection refused"}
+{"url":"https://down.example.com/","test":"underscore","origin":"https://down.example.com_.attacker.example","method":"GET","status":0,"acao":"","acac":"","vary":"","error":"connection refused"}
+{"url":"https://evil.other.net/","test":"reflect","origin":"https://attacker.example","method":"GET","status":200,"acao":"https://attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://evil.other.net/","test":"null","origin":"null","method":"GET","status":200,"acao":"null","acac":"true","vary":"Origin"}
+{"url":"https://evil.other.net/","test":"prefix","origin":"https://evil.other.net.attacker.example","method":"GET","status":200,"acao":"https://evil.other.net.attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://evil.other.net/","test":"suffix","origin":"https://attackerevil.other.net","method":"GET","status":200,"acao":"https://attackerevil.other.net","acac":"true","vary":"Origin"}
+{"url":"https://evil.other.net/","test":"dot","origin":"https://evilxother.net","method":"GET","status":200,"acao":"https://evilxother.net","acac":"true","vary":"Origin"}
+{"url":"https://evil.other.net/","test":"subdomain","origin":"https://raijin.evil.other.net","method":"GET","status":200,"acao":"https://raijin.evil.other.net","acac":"true","vary":"Origin"}
+{"url":"https://evil.other.net/","test":"http","origin":"http://evil.other.net","method":"GET","status":200,"acao":"http://evil.other.net","acac":"true","vary":"Origin"}
+{"url":"https://evil.other.net/","test":"backtick","origin":"https://evil.other.net`.attacker.example","method":"GET","status":200,"acao":"https://evil.other.net`.attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://evil.other.net/","test":"underscore","origin":"https://evil.other.net_.attacker.example","method":"GET","status":200,"acao":"https://evil.other.net_.attacker.example","acac":"true","vary":"Origin"}
+{"url":"https://api.example.com/me","test":"reflect","origin":"https://attacker.example","method":"GET","status":200,"acao":"https://attacker.example","acac":"true","vary":"Origin"}
