@@ -1,0 +1,31 @@
+name: Release
+
+# Tags and releases every change to the binary. The tag logic is in .github/release.sh.
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: version part to bump
+        type: choice
+        options: [patch, minor, major]
+        default: patch
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Tag and release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BUMP: ${{ inputs.bump || 'patch' }}
+          BEFORE: ${{ github.event.before }}
+        run: .github/release.sh "$BUMP" "$BEFORE"

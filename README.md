@@ -37,6 +37,12 @@ There is no external engine, so the baselines are the tool's own full log (the `
 go install github.com/protonnegativo/raijin-cors/cmd/raijin-cors@latest
 ```
 
+This installs the latest release.
+
+### Versions
+
+Releases are tagged automatically on every change. `raijin-cors --version` shows the release (`dev` plus the commit for a local build), and `raijin-mcp update` updates every Raijin tool at once.
+
 Nothing else is needed: the requests are sent by the binary.
 
 ## Usage
