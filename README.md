@@ -42,6 +42,7 @@ Nothing else is needed: the requests are sent by the binary.
 ## Usage
 
 ```bash
+raijin-cors --scope scope.txt                                      # test every host the scope names
 raijin-cors --scope scope.txt -u https://api.example.com/v1/me
 raijin-cors --scope scope.txt -l urls.txt -H 'Cookie: session=...'   # send your session with every request
 raijin-cors --scope scope.txt --input raw.jsonl                      # reduce a log you already have
@@ -57,6 +58,8 @@ example.com
 10.0.0.0/24
 !admin.example.com
 ```
+
+With no `-u`, `-l` or `--input`, raijin-cors tests every host the scope names: each domain, each IP and each address of a range up to a /24, minus exclusions, as `https://<host>/`. A wildcard or a larger range names no single host, so it gets a `next` step that enumerates it first (`raijin-subs` or `raijin-ports`) and then runs raijin-cors on what was found.
 
 URLs outside the scope are dropped before any request is sent, and observations for out-of-scope URLs in an `--input` log are dropped from the output. Both are counted in `omitted.out_of_scope`. A target without a scheme is tested as `https://`.
 
@@ -221,7 +224,7 @@ The Raijin banner is **off by default**, so normal runs stay small. `--banner` p
 | Flag | Default | |
 |---|---|---|
 | `--scope` | (required) | scope file |
-| `-u` / `-l` / `--input` | | one URL (repeatable) / URL file / existing raw JSONL |
+| `-u` / `-l` / `--input` | every host the scope names, as `https://<host>/` | one URL (repeatable) / URL file / existing raw JSONL |
 | `-H` | | extra request header `Name: value` (repeatable) |
 | `--rate` | 10 | requests per second |
 | `--threads` | 5 | concurrent requests |

@@ -36,7 +36,7 @@ func run(args []string, stdout, stderr io.Writer) int {
 	fs := flag.NewFlagSet("raijin-cors", flag.ContinueOnError)
 	fs.SetOutput(stderr)
 	var targets, headers multi
-	fs.Var(&targets, "u", "target URL (repeatable); without a scheme it is tested as https://")
+	fs.Var(&targets, "u", "target URL (repeatable; default: every host the scope names, as https://<host>/); without a scheme it is tested as https://")
 	fs.Var(&headers, "H", `extra request header "Name: value" (repeatable), e.g. a session cookie`)
 	list := fs.String("l", "", "file with one target URL per line")
 	scopeFile := fs.String("scope", "", "scope file (required): domains, *.wildcards, IPs, CIDRs, !exclusions")
@@ -53,7 +53,7 @@ func run(args []string, stdout, stderr io.Writer) int {
 	showVersion := fs.Bool("version", false, "print the version")
 	showBanner := fs.Bool("banner", false, "print the Raijin banner to stderr (off by default to keep output small)")
 	fs.Usage = func() {
-		fmt.Fprintf(stderr, "usage: raijin-cors --scope scope.txt (-u url | -l urls.txt | --input raw.jsonl) [flags]\n\n")
+		fmt.Fprintf(stderr, "usage: raijin-cors --scope scope.txt [-u url | -l urls.txt | --input raw.jsonl] [flags]\n\nWith no targets it tests every host the scope names, as https://<host>/.\n\n")
 		fs.PrintDefaults()
 	}
 	if err := fs.Parse(args); err != nil {
@@ -114,8 +114,30 @@ func run(args []string, stdout, stderr io.Writer) int {
 			}
 			targets = append(targets, lines...)
 		}
-		inScope := filter(targets, sc, res.Omitted)
+		var inScope []string
+		if len(targets) == 0 {
+			// no targets given: test what the scope names, each host as https://<host>/
+			named, wildcards, ranges := sc.Targets()
+			for i := range named {
+				named[i] = "https://" + named[i] + "/"
+			}
+			inScope = filter(named, sc, res.Omitted)
+			for _, w := range wildcards {
+				res.Next = append(res.Next, "raijin-subs --scope "+*scopeFile+" -d "+strings.TrimPrefix(w, "*.")+", then raijin-cors -l <live hosts> to cover "+w)
+			}
+			for _, r := range ranges {
+				res.Next = append(res.Next, "raijin-ports --scope "+*scopeFile+" -host "+r+", then raijin-cors -l <open ports> to cover "+r)
+			}
+		} else {
+			inScope = filter(targets, sc, res.Omitted)
+		}
 		if len(inScope) == 0 {
+			if len(res.Next) > 0 {
+				res.Summary = "the scope names no single host to scan"
+				res.Target = *scopeFile
+				write(stdout, &res, *format, *pretty)
+				return 1
+			}
 			fmt.Fprintln(stderr, "raijin-cors: no targets in scope")
 			return 1
 		}

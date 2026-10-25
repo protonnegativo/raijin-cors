@@ -125,3 +125,56 @@ func TestUsageErrorsExitOne(t *testing.T) {
 		t.Errorf("usage errors write nothing to stdout: %q", out.String())
 	}
 }
+
+// With only --scope, every host the scope names is tested as https://<host>/ and wildcards get a
+// next step. A scope names hostnames, not ports, so this checks the raw log of what was sent
+// (127.0.0.1:443 needs no live server: a refused connection is still logged).
+func TestScopeAloneTestsWhatTheScopeNames(t *testing.T) {
+	dir := t.TempDir()
+	scopePath := filepath.Join(dir, "scope.txt")
+	if err := os.WriteFile(scopePath, []byte("127.0.0.1\n*.example.com\n!127.0.0.2\n"), 0o600); err != nil {
+		t.Fatal(err)
+	}
+	raw := filepath.Join(dir, "raw.jsonl")
+	var out, errb bytes.Buffer
+	if code := run([]string{"--scope", scopePath, "--raw", raw, "--timeout", "2"}, &out, &errb); code != 0 {
+		t.Fatalf("exit %d: %s %s", code, errb.String(), out.String())
+	}
+	b, err := os.ReadFile(raw)
+	if err != nil {
+		t.Fatal(err)
+	}
+	urls := map[string]bool{}
+	for _, l := range strings.Split(strings.TrimSpace(string(b)), "\n") {
+		var o struct{ URL string }
+		if err := json.Unmarshal([]byte(l), &o); err != nil {
+			t.Fatal(err)
+		}
+		urls[o.URL] = true
+	}
+	if len(urls) != 1 || !urls["https://127.0.0.1/"] {
+		t.Errorf("tested URLs = %v", urls)
+	}
+	var res struct{ Next []string }
+	if err := json.Unmarshal(out.Bytes(), &res); err != nil {
+		t.Fatal(err)
+	}
+	if len(res.Next) != 1 || !strings.Contains(res.Next[0], "raijin-subs --scope "+scopePath+" -d example.com") {
+		t.Errorf("next = %v", res.Next)
+	}
+}
+
+// A scope of wildcards only has nothing to test: the result carries the next steps and exits 1.
+func TestScopeWithNoSingleHost(t *testing.T) {
+	var out, errb bytes.Buffer
+	if code := run([]string{"--scope", scopeFile(t)}, &out, &errb); code != 1 {
+		t.Fatalf("exit %d", code)
+	}
+	var res struct {
+		Summary string
+		Next    []string
+	}
+	if err := json.Unmarshal(out.Bytes(), &res); err != nil || len(res.Next) != 1 || res.Summary != "the scope names no single host to scan" {
+		t.Errorf("res = %+v err = %v", res, err)
+	}
+}
