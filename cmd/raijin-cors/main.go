@@ -21,8 +21,6 @@ import (
 	"github.com/protonnegativo/raijin-cors/internal/state"
 )
 
-const version = "0.1.0"
-
 type multi []string
 
 func (m *multi) String() string     { return strings.Join(*m, ",") }
@@ -60,10 +58,10 @@ func run(args []string, stdout, stderr io.Writer) int {
 		return 1
 	}
 	if *showBanner {
-		banner.Write(stderr, "raijin-cors", version, useColor(stderr))
+		banner.Write(stderr, "raijin-cors", version(), useColor(stderr))
 	}
 	if *showVersion {
-		fmt.Fprintln(stdout, "raijin-cors", version)
+		fmt.Fprintln(stdout, "raijin-cors", version())
 		return 0
 	}
 	if fs.NArg() > 0 {
@@ -82,7 +80,7 @@ func run(args []string, stdout, stderr io.Writer) int {
 
 	res := schema.Result{
 		Tool:     "raijin-cors",
-		Version:  version,
+		Version:  version(),
 		Findings: []schema.Finding{},
 		Groups:   []schema.Group{},
 		Omitted:  map[string]int{},

@@ -39,7 +39,7 @@ func TestBannerGoesToStderrOnly(t *testing.T) {
 	if code != 0 {
 		t.Fatalf("exit %d", code)
 	}
-	if !strings.Contains(errb.String(), "TGT-LOCK") || !strings.Contains(errb.String(), "raijin-cors v"+version) {
+	if !strings.Contains(errb.String(), "TGT-LOCK") || !strings.Contains(errb.String(), "raijin-cors "+version()) {
 		t.Errorf("banner missing or without the version: %q", errb.String())
 	}
 	if strings.Contains(out.String(), "TGT-LOCK") {
