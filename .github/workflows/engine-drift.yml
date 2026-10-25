@@ -1,0 +1,32 @@
+name: Weekly live benchmark
+
+# raijin-cors sends its own requests (no external engine). This job runs the LIVE bench against the
+# local lab (bench/lab.py) every week to catch changes in Go's net/http or crypto/tls and lab drift.
+# It does not commit the refreshed fixtures; they are uploaded as an artifact.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: go version
+      - run: pip install tiktoken
+      - name: LIVE benchmark
+        run: |
+          LIVE=1 PY=python3 bench/run.sh "$RUNNER_TEMP/live" | tee "$RUNNER_TEMP/live.log"
+          ! grep -E '[1-9][0-9]* missing' "$RUNNER_TEMP/live.log"
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-bench
+          path: ${{ runner.temp }}/live
+          retention-days: 14
