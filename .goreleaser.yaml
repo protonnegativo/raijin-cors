@@ -5,7 +5,7 @@ project_name: raijin-cors
 
 before:
   hooks:
-    - go mod tidy -diff
+    - go mod tidy
 
 builds:
   - id: raijin-cors
