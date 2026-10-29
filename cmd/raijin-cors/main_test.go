@@ -164,11 +164,14 @@ func TestScopeAloneTestsWhatTheScopeNames(t *testing.T) {
 	}
 }
 
-// A scope of wildcards only has nothing to test: the result carries the next steps and exits 1.
+// A scope of wildcards only has nothing to test: the result carries the next steps and exits 2.
 func TestScopeWithNoSingleHost(t *testing.T) {
 	var out, errb bytes.Buffer
-	if code := run([]string{"--scope", scopeFile(t)}, &out, &errb); code != 1 {
-		t.Fatalf("exit %d", code)
+	if code := run([]string{"--scope", scopeFile(t)}, &out, &errb); code != 2 {
+		t.Fatalf("exit %d, want 2", code)
+	}
+	if !strings.HasPrefix(out.String(), `{"schema_version":1,`) {
+		t.Errorf("stdout starts with %.40s", out.String())
 	}
 	var res struct {
 		Summary string

@@ -253,7 +253,7 @@ The Raijin banner is **off by default**, so normal runs stay small. `--banner` p
 
 Every result starts with `"schema_version": 1`. An invalid scope file stops the run before any request and prints a result whose `errors` has one `kind:"scope"` entry per invalid line (its `hint` names the line and the rule); a missing scope file is one such entry.
 
-Exit codes: `0` when the run worked (with or without findings); `2` for a structured error, with the JSON on stdout (an invalid scope; the `2` for a missing engine of other Raijin tools never happens, because the engine is built in); `1` for a usage error (no scope, no URL in scope, a bad `-H`, arguments after `--`), which prints nothing to stdout.
+Exit codes: `0` when the run worked (with or without findings); `2` for a structured error, with the JSON on stdout (an invalid scope, or a scope that names no single host, only wildcards or large ranges, where `next` says what to run first; the `2` for a missing engine of other Raijin tools never happens, because the engine is built in); `1` for a usage error (no scope, no URL in scope, a bad `-H`, arguments after `--`), which prints nothing to stdout.
 
 ## Development
 
