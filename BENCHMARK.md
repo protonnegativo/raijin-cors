@@ -11,7 +11,7 @@ Reproduce from the saved requests: `bench/run.sh`. Start the lab, retest it and 
 - **There is no external engine.** raijin-cors sends the requests itself, so the "engine output" is its own full log, and the text baseline is what an agent would do without the tool:
   - **raw JSONL:** one line per request, with the time, URL, test, origin, method, status, `Access-Control-Allow-Origin`, `-Credentials`, `-Methods`, `-Headers`, `-Expose-Headers`, `Vary` and the latency. This is the structured output an agent would parse.
   - **curl loop:** for each (URL, Origin) pair in the raw log, a `== <url> Origin: <origin>` line and then `curl -sS -k -D - -o /dev/null -H "Origin: <origin>" <url>`, run right after the live run (`curl.txt`). It prints only the response headers, never the body, which makes it the cheapest honest baseline: an agent that ran `curl -i` would also read every body.
-- **raijin-cors rows:** replays of `raw.jsonl` with `--input`, so every row sees the same requests. Defaults apply: no limit on findings, and `--max-bytes 16000`, which was not reached. A replay has no `raw` field; the live runs, which have it, were 16 tokens larger (1,288 and 1,573).
+- **raijin-cors rows:** replays of `raw.jsonl` with `--input`, so every row sees the same requests. Defaults apply: no limit on findings, and `--max-bytes 16000`, which was not reached. A replay has no `raw` field, so a live run is a little larger; the numbers below are from the replay (`bench/run.sh` without `LIVE=1`, run on 2026-10-29 with the `schema_version` field in the output), and the live runs were not repeated.
 - **Tokens:** counted with tiktoken (`o200k_base`). This is a **proxy**, because Claude's tokenizer is not public. `bench/count_tokens.py` also gives exact Claude counts if `ANTHROPIC_API_KEY` is set and the `anthropic` package is installed. `cl100k_base` gives the same ratios.
 
 ## Scenario 1: noisy
@@ -22,8 +22,8 @@ Reproduce from the saved requests: `bench/run.sh`. Start the lab, retest it and 
 |---|---:|---:|---:|
 | raw JSONL (per-request log) | 80,317 | 30,280 | 1× |
 | curl loop (headers only) | 78,792 | 28,850 | 1.05× |
-| **raijin-cors JSON (default)** | 3,354 | **1,272** | **24×** |
-| raijin-cors `--pretty` | 4,715 | 1,619 | 19× |
+| **raijin-cors JSON (default)** | 3,384 | **1,280** | **24×** |
+| raijin-cors `--pretty` | 4,749 | 1,630 | 19× |
 | raijin-cors `--format table` | 759 | 241 | 126× |
 
 ## Scenario 2: findings
@@ -40,8 +40,8 @@ Reproduce from the saved requests: `bench/run.sh`. Start the lab, retest it and 
 |---|---:|---:|---:|
 | raw JSONL (per-request log) | 26,779 | 9,891 | 1× |
 | curl loop (headers only) | 27,633 | 9,659 | 1.02× |
-| **raijin-cors JSON (default)** | 5,238 | **1,557** | **6.4×** |
-| raijin-cors `--pretty` | 7,916 | 2,272 | 4.4× |
+| **raijin-cors JSON (default)** | 5,268 | **1,565** | **6.3×** |
+| raijin-cors `--pretty` | 7,950 | 2,283 | 4.3× |
 | raijin-cors `--format table` | 2,785 | 866 | 11.4× |
 
 ## Nothing is lost
@@ -55,8 +55,8 @@ What the JSON leaves out stays in the raw JSONL: times, latencies, the method, `
 
 ## Reading the numbers
 
-- **Against the raw log**, the structured output an agent would parse, raijin-cors uses **24× fewer tokens** on the noisy run and **6.4× fewer** on the findings run, for the same requests and answers. The gap grows with repetition: 30 URLs with no CORS headers cost one group and 30 URLs instead of 240 log lines.
-- **Against the curl loop**, the result is almost the same, **23× smaller** on the noisy run (28,850 → 1,272) and **6.2× smaller** on the findings run (9,659 → 1,557). Unlike with httpx or nmap, there is no terse text mode to compare with: the loop prints one header block per request, so it is as large as the JSON log. That baseline also leaves the agent to work out, for each of the 121 or 368 answers, whether the origin came back and whether credentials were allowed.
+- **Against the raw log**, the structured output an agent would parse, raijin-cors uses **24× fewer tokens** on the noisy run and **6.3× fewer** on the findings run, for the same requests and answers. The gap grows with repetition: 30 URLs with no CORS headers cost one group and 30 URLs instead of 240 log lines.
+- **Against the curl loop**, the result is almost the same, **22× smaller** on the noisy run (28,850 → 1,280) and **6.2× smaller** on the findings run (9,659 → 1,565). Unlike with httpx or nmap, there is no terse text mode to compare with: the loop prints one header block per request, so it is as large as the JSON log. That baseline also leaves the agent to work out, for each of the 121 or 368 answers, whether the origin came back and whether credentials were allowed.
 - **The findings run is the least favorable case.** Every URL has a different policy, so nothing collapses across URLs, and each finding pays for its title, tags, policy and proof. The saving there comes from folding nine requests per URL into one policy line.
 - **The output stays bounded.** On a test too big for `--max-bytes`, raijin-cors cuts the least important data first: group locations, then groups, then extra locations of low-ranked findings, then low-ranked findings. Every cut is counted in `omitted`, and `next` points to the raw file. The raw log and the curl loop have no upper bound.
 
