@@ -25,7 +25,7 @@ jobs:
           LIVE=1 PY=python3 bench/run.sh "$RUNNER_TEMP/live" | tee "$RUNNER_TEMP/live.log"
           ! grep -E '[1-9][0-9]* missing' "$RUNNER_TEMP/live.log"
       - if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: live-bench
           path: ${{ runner.temp }}/live
