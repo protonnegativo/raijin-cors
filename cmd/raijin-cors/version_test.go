@@ -35,3 +35,12 @@ func TestVersionLine(t *testing.T) {
 		t.Errorf("version line: %q", out.String())
 	}
 }
+
+func TestReleaseVersionWins(t *testing.T) {
+	old := releaseVersion
+	t.Cleanup(func() { releaseVersion = old })
+	releaseVersion = "v9.9.9"
+	if got := version(); got != "v9.9.9" {
+		t.Errorf("version() = %q, want v9.9.9", got)
+	}
+}
