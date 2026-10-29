@@ -178,3 +178,76 @@ func TestScopeWithNoSingleHost(t *testing.T) {
 		t.Errorf("res = %+v err = %v", res, err)
 	}
 }
+
+func TestSchemaVersionIsTheFirstField(t *testing.T) {
+	var out, errb bytes.Buffer
+	if code := run([]string{"--scope", scopeFile(t), "--input", "../../testdata/sample.jsonl"}, &out, &errb); code != 0 {
+		t.Fatalf("exit %d: %s", code, errb.String())
+	}
+	if !strings.HasPrefix(out.String(), `{"schema_version":1,"tool":"raijin-cors",`) {
+		t.Errorf("output starts with %.60s", out.String())
+	}
+}
+
+// An invalid scope is reported as structured errors, one per bad line, and nothing is scanned.
+func TestInvalidScopeIsAStructuredError(t *testing.T) {
+	p := filepath.Join(t.TempDir(), "scope.txt")
+	if err := os.WriteFile(p, []byte("example.com\nexample.org:443\n10.0.0.7/24\n"), 0o600); err != nil {
+		t.Fatal(err)
+	}
+	var out, errb bytes.Buffer
+	if code := run([]string{"--scope", p, "-u", "https://example.com/"}, &out, &errb); code != 1 {
+		t.Fatalf("exit %d, want 1", code)
+	}
+	var res struct {
+		SchemaVersion int `json:"schema_version"`
+		Summary       string
+		Findings      []any
+		Errors        []struct{ Kind, Hint string }
+		Raw           string
+	}
+	if err := json.Unmarshal(out.Bytes(), &res); err != nil {
+		t.Fatalf("stdout is not JSON: %v: %q", err, out.String())
+	}
+	if res.SchemaVersion != 1 || res.Summary != "invalid scope file, nothing scanned" || len(res.Findings) != 0 || res.Raw != "" {
+		t.Errorf("res = %+v", res)
+	}
+	if len(res.Errors) != 2 {
+		t.Fatalf("errors = %+v, want one per invalid line", res.Errors)
+	}
+	for i, want := range []string{"line 2: port in rule 'example.org:443'", "line 3: CIDR has host bits set '10.0.0.7/24'"} {
+		if res.Errors[i].Kind != "scope" || !strings.Contains(res.Errors[i].Hint, want) {
+			t.Errorf("error %d = %+v, want kind scope and %q", i, res.Errors[i], want)
+		}
+	}
+}
+
+func TestMissingScopeFileIsAStructuredError(t *testing.T) {
+	var out, errb bytes.Buffer
+	if code := run([]string{"--scope", filepath.Join(t.TempDir(), "nope.txt")}, &out, &errb); code != 1 {
+		t.Fatalf("exit %d, want 1", code)
+	}
+	var res struct{ Errors []struct{ Kind, Hint string } }
+	if err := json.Unmarshal(out.Bytes(), &res); err != nil || len(res.Errors) != 1 || res.Errors[0].Kind != "scope" {
+		t.Errorf("stdout = %q err = %v", out.String(), err)
+	}
+}
+
+// --state marks findings as new once, through the core's state.Mark.
+func TestStateMarksNewOnce(t *testing.T) {
+	st := filepath.Join(t.TempDir(), "state.json")
+	args := []string{"--scope", scopeFile(t), "--input", "../../testdata/sample.jsonl", "--state", st}
+	var first, second, errb bytes.Buffer
+	if code := run(args, &first, &errb); code != 0 {
+		t.Fatalf("exit %d: %s", code, errb.String())
+	}
+	if code := run(args, &second, &errb); code != 0 {
+		t.Fatalf("exit %d: %s", code, errb.String())
+	}
+	if !strings.Contains(first.String(), `, 2 new"`) || !strings.Contains(first.String(), `"new":true`) {
+		t.Errorf("first run should mark both findings new: %s", first.String())
+	}
+	if !strings.Contains(second.String(), `, 0 new"`) || strings.Contains(second.String(), `"new":true`) {
+		t.Errorf("second run should mark nothing new: %s", second.String())
+	}
+}
