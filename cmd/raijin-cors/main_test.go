@@ -196,8 +196,11 @@ func TestInvalidScopeIsAStructuredError(t *testing.T) {
 		t.Fatal(err)
 	}
 	var out, errb bytes.Buffer
-	if code := run([]string{"--scope", p, "-u", "https://example.com/"}, &out, &errb); code != 1 {
-		t.Fatalf("exit %d, want 1", code)
+	if code := run([]string{"--scope", p, "-u", "https://example.com/"}, &out, &errb); code != 2 {
+		t.Fatalf("exit %d, want 2", code)
+	}
+	if !strings.HasPrefix(out.String(), `{"schema_version":1,`) {
+		t.Errorf("stdout starts with %.40s", out.String())
 	}
 	var res struct {
 		SchemaVersion int `json:"schema_version"`
@@ -224,8 +227,8 @@ func TestInvalidScopeIsAStructuredError(t *testing.T) {
 
 func TestMissingScopeFileIsAStructuredError(t *testing.T) {
 	var out, errb bytes.Buffer
-	if code := run([]string{"--scope", filepath.Join(t.TempDir(), "nope.txt")}, &out, &errb); code != 1 {
-		t.Fatalf("exit %d, want 1", code)
+	if code := run([]string{"--scope", filepath.Join(t.TempDir(), "nope.txt")}, &out, &errb); code != 2 {
+		t.Fatalf("exit %d, want 2", code)
 	}
 	var res struct{ Errors []struct{ Kind, Hint string } }
 	if err := json.Unmarshal(out.Bytes(), &res); err != nil || len(res.Errors) != 1 || res.Errors[0].Kind != "scope" {
