@@ -1,5 +1,11 @@
 # ⚡ Raijin CORS
 
+[![CI](https://github.com/protonnegativo/raijin-cors/actions/workflows/ci.yml/badge.svg)](https://github.com/protonnegativo/raijin-cors/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/protonnegativo/raijin-cors)](https://github.com/protonnegativo/raijin-cors/releases/latest)
+[![License: MIT](https://img.shields.io/github/license/protonnegativo/raijin-cors)](LICENSE)
+[![Go Reference](https://pkg.go.dev/badge/github.com/protonnegativo/raijin-cors.svg)](https://pkg.go.dev/github.com/protonnegativo/raijin-cors)
+[![Go Report Card](https://goreportcard.com/badge/github.com/protonnegativo/raijin-cors)](https://goreportcard.com/report/github.com/protonnegativo/raijin-cors)
+
 **CORS testing for AI agents: only the exploitable policies (credentials + a reflected, null or bypassed origin) as findings, each with the proof request, and every other answer grouped.**
 
 `raijin-cors` is a tool of **Raijin**, an arsenal of offensive security tools built for AI agents. It has no external engine: it sends one GET per origin test to each URL with Go's `net/http`, logs every answer, and returns the **Raijin Schema**: one compact JSON where URLs with the same CORS policy share one entry, the policies an attacker can exploit are ranked findings with a ready `curl` proof, and anything it had to cut is counted.
@@ -155,7 +161,7 @@ Test the endpoints that answer with user data when you are logged in (`/api/me`,
       "locations": ["http://127.0.0.1:19372/api/account"]
     }
   ],
-  "raw": "/root/projects/raijin-cors/bench/fixtures/findings/raw.jsonl"
+  "raw": "/tmp/raijin-cors-findings.jsonl"
 }
 ```
 
