@@ -1,5 +1,11 @@
 # ⚡ Raijin CORS
 
+[![CI](https://github.com/protonnegativo/raijin-cors/actions/workflows/ci.yml/badge.svg)](https://github.com/protonnegativo/raijin-cors/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/protonnegativo/raijin-cors)](https://github.com/protonnegativo/raijin-cors/releases/latest)
+[![License: MIT](https://img.shields.io/github/license/protonnegativo/raijin-cors)](LICENSE)
+[![Go Reference](https://pkg.go.dev/badge/github.com/protonnegativo/raijin-cors.svg)](https://pkg.go.dev/github.com/protonnegativo/raijin-cors)
+[![Go Report Card](https://goreportcard.com/badge/github.com/protonnegativo/raijin-cors)](https://goreportcard.com/report/github.com/protonnegativo/raijin-cors)
+
 **CORS testing for AI agents: only the exploitable policies (credentials + a reflected, null or bypassed origin) as findings, each with the proof request, and every other answer grouped.**
 
 `raijin-cors` is a tool of **Raijin**, an arsenal of offensive security tools built for AI agents. It has no external engine: it sends one GET per origin test to each URL with Go's `net/http`, logs every answer, and returns the **Raijin Schema**: one compact JSON where URLs with the same CORS policy share one entry, the policies an attacker can exploit are ranked findings with a ready `curl` proof, and anything it had to cut is counted.
@@ -12,17 +18,17 @@ Here is the same test, with the same requests, read by an agent (tokens, `o200k_
 
 ```
 Noisy run: 46 URLs, 368 requests, 1 exploitable endpoint
-  raijin-cors     ▉                         1,272 tokens
+  raijin-cors     ▉                         1,280 tokens
   curl loop       ███████████████████      28,850 tokens
   raw JSONL       ████████████████████     30,280 tokens
 
 Findings run: 15 URLs, 121 requests, one per CORS policy
-  raijin-cors     ███▏                      1,557 tokens
+  raijin-cors     ███▏                      1,565 tokens
   curl loop       ███████████████████▌      9,659 tokens
   raw JSONL       ████████████████████      9,891 tokens
 ```
 
-raijin-cors reads **24×** fewer tokens than its own per-request log on the noisy run and **6.4×** fewer on the findings run, and **23×** and **6.2×** fewer than a `curl -D -` loop that prints only the response headers. Each run's bars are drawn to scale against the raw JSONL.
+raijin-cors reads **24×** fewer tokens than its own per-request log on the noisy run and **6.3×** fewer on the findings run, and **22×** and **6.2×** fewer than a `curl -D -` loop that prints only the response headers. Each run's bars are drawn to scale against the raw JSONL.
 
 - **Nothing is lost.** Every request is in the output: the URL is in exactly one entry, and that entry's `policy` says which `Access-Control-Allow-Origin` and `Access-Control-Allow-Credentials` each origin test got. `bench/verify.py` checked all 489 requests in both runs and none were missing.
 - **The exploitable policies come first.** An origin that is echoed with `Access-Control-Allow-Credentials: true` is a high finding with the request that proves it. 30 URLs with no CORS headers are one group that lists all 30.
@@ -75,8 +81,9 @@ Test the endpoints that answer with user data when you are logged in (`/api/me`,
 
 ```json
 {
+  "schema_version": 1,
   "tool": "raijin-cors",
-  "version": "0.1.0",
+  "version": "v0.1.0",
   "target": "15 URL(s)",
   "summary": "15 URLs, 121 requests, 12 findings (7 high, 2 medium, 1 low, 2 info), 3 groups, 1 no response",
   "findings": [
@@ -155,7 +162,7 @@ Test the endpoints that answer with user data when you are logged in (`/api/me`,
       "locations": ["http://127.0.0.1:19372/api/account"]
     }
   ],
-  "raw": "/root/projects/raijin-cors/bench/fixtures/findings/raw.jsonl"
+  "raw": "/tmp/raijin-cors-findings.jsonl"
 }
 ```
 
@@ -244,7 +251,9 @@ The Raijin banner is **off by default**, so normal runs stay small. `--banner` p
 | `--banner` | false | print the banner to stderr |
 | `--version` | | print the version |
 
-Exit codes: `0` when the run worked (with or without findings), `1` on a usage error (no scope, no URL in scope, a bad `-H`, arguments after `--`). The engine is built in, so the `2` (engine missing) of other Raijin tools never happens, and there is nothing to pass after `--`.
+Every result starts with `"schema_version": 1`. An invalid scope file stops the run before any request and prints a result whose `errors` has one `kind:"scope"` entry per invalid line (its `hint` names the line and the rule); a missing scope file is one such entry.
+
+Exit codes: `0` when the run worked (with or without findings); `2` for a structured error, with the JSON on stdout (an invalid scope, or a scope that names no single host, only wildcards or large ranges, where `next` says what to run first; the `2` for a missing engine of other Raijin tools never happens, because the engine is built in); `1` for a usage error (no scope, no URL in scope, a bad `-H`, arguments after `--`), which prints nothing to stdout.
 
 ## Development
 
@@ -254,7 +263,7 @@ go vet ./...
 LIVE=1 bench/run.sh   # start the local lab and refresh the benchmark fixtures
 ```
 
-Standard library only. `bench/lab.py` is a local lab with one CORS policy per port; `bench/run.sh` replays the saved fixtures by default.
+The only dependency is [raijin-core](https://github.com/protonnegativo/raijin-core) (scope, state and the schema envelope); the requests use the standard library. `bench/lab.py` is a local lab with one CORS policy per port; `bench/run.sh` replays the saved fixtures by default.
 
 ## Responsible use
 

@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/protonnegativo/raijin-core/scope"
 	"github.com/protonnegativo/raijin-cors/internal/cors"
 	"github.com/protonnegativo/raijin-cors/internal/schema"
-	"github.com/protonnegativo/raijin-cors/internal/scope"
 )
 
 func load(t *testing.T) []cors.Observation {

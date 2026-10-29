@@ -5,7 +5,6 @@ package main
 import (
 	"bufio"
 	"context"
-	"encoding/json"
 	"flag"
 	"fmt"
 	"io"
@@ -13,12 +12,13 @@ import (
 	"os/signal"
 	"strings"
 
+	core "github.com/protonnegativo/raijin-core/schema"
+	"github.com/protonnegativo/raijin-core/scope"
+	"github.com/protonnegativo/raijin-core/state"
 	"github.com/protonnegativo/raijin-cors/internal/banner"
 	"github.com/protonnegativo/raijin-cors/internal/cors"
 	"github.com/protonnegativo/raijin-cors/internal/reduce"
 	"github.com/protonnegativo/raijin-cors/internal/schema"
-	"github.com/protonnegativo/raijin-cors/internal/scope"
-	"github.com/protonnegativo/raijin-cors/internal/state"
 )
 
 type multi []string
@@ -72,12 +72,6 @@ func run(args []string, stdout, stderr io.Writer) int {
 		fmt.Fprintln(stderr, "raijin-cors: --scope is required")
 		return 1
 	}
-	sc, err := scope.Load(*scopeFile)
-	if err != nil {
-		fmt.Fprintln(stderr, "raijin-cors: scope:", err)
-		return 1
-	}
-
 	res := schema.Result{
 		Tool:     "raijin-cors",
 		Version:  version(),
@@ -87,6 +81,15 @@ func run(args []string, stdout, stderr io.Writer) int {
 		Errors:   []schema.Error{},
 		Next:     []string{},
 		Budget:   schema.Budget{MaxItems: *maxItems, MaxBytes: *maxBytes},
+	}
+	sc, err := scope.Load(*scopeFile)
+	if err != nil {
+		// An invalid scope is an error the caller can fix: say which lines, and scan nothing.
+		res.Target = *scopeFile
+		res.Errors = append(res.Errors, scope.SchemaErrors(err)...)
+		res.Summary = "invalid scope file, nothing scanned"
+		write(stdout, &res, *format, *pretty)
+		return 2
 	}
 
 	var obs []cors.Observation
@@ -134,7 +137,7 @@ func run(args []string, stdout, stderr io.Writer) int {
 				res.Summary = "the scope names no single host to scan"
 				res.Target = *scopeFile
 				write(stdout, &res, *format, *pretty)
-				return 1
+				return 2
 			}
 			fmt.Fprintln(stderr, "raijin-cors: no targets in scope")
 			return 1
@@ -189,7 +192,9 @@ func run(args []string, stdout, stderr io.Writer) int {
 		if err != nil {
 			res.Errors = append(res.Errors, schema.Error{Kind: "state_error", Hint: err.Error()})
 		} else {
-			newCount = st.Mark(res.Findings, allLocations)
+			newCount = state.Mark(st, res.Findings, allLocations,
+				func(f *schema.Finding) string { return f.Fingerprint },
+				func(f *schema.Finding) { f.New = true })
 			if err := st.Save(*statePath); err != nil {
 				res.Errors = append(res.Errors, schema.Error{Kind: "state_error", Hint: err.Error()})
 			}
@@ -315,12 +320,7 @@ func write(w io.Writer, res *schema.Result, format string, pretty bool) {
 		}
 		return
 	}
-	enc := json.NewEncoder(w)
-	enc.SetEscapeHTML(false)
-	if pretty {
-		enc.SetIndent("", "  ")
-	}
-	_ = enc.Encode(res)
+	_ = core.Write(w, res, pretty)
 }
 
 func readLines(path string) ([]string, error) {
